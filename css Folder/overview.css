@@ -1,0 +1,15 @@
+.report_dataset{
+  width: 290px;
+  height: 80px;
+  color: #FFFFFF;
+  background: #c4c4c4;
+  display: inline-block;
+  padding: 13px;
+  margin: 0;
+  float: left;
+}
+.selectedHeader{
+  background: #213990;
+  margin-left: 14px;
+  margin-right: 14px;
+}

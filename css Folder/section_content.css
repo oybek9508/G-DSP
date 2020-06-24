@@ -1,0 +1,26 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #f7f7fd;
+}
+.section{
+  background: #FFFFFF;
+  padding: 58px;
+  padding-top: 44px;
+}
+select{
+  border: 0px;
+  border-bottom: 1px solid #9B9B9B;
+}
+option{
+  border: 0px;
+  background: #F0F0F0;
+  text-align: center;
+}
+input{
+  border: 0px;
+  border-bottom: 1px solid #9B9B9B;
+}

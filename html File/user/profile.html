@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css Folder/profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+  </head>
+  <body>
+    <br>
+    <span class="profile_title">My <strong>Profile</strong></span><br>
+    <span class="profile_addex">setting your profile</span>
+    <div class="menu">
+      <div class="menu_button">
+        Details
+      </div>
+      <div class="menu_button">
+        TEAM MEMBERS
+      </div>
+    </div>
+    <div class="section_top">
+      <span class="section_title">Edit</span><br><br>
+        <div class="profile">
+          <span>Profile Picture & Full name</span><br><br>
+          <div class="">
+            <img class="profile_picture" src="../../img/no_image.svg">
+            <button type="button" class="btnblue" id="Upload_Photo">Upload Photo</button>
+            <button type="button" class="btnwhite" id="Clear_Photo">Clear Photo</button><br>
+          </div><br>
+          <input type="text" class="inputProfile" name="profile" value="">
+          <button type="button" class="btnwhite" id="updateProfile">Update</button>
+        </div>
+        <div class="team">
+          <span>Team</span><br><br>
+          <input type="text" class="inputProfile" name="team" value="">
+          <button type="button" class="btnwhite" name="Update">Update</button>
+        </div><br>
+        <button type="button" class="btnblue" id="Confirm">Confirm</button>
+    </div>
+    <div class="section_bottom">
+      <span class="section_title">Change Password</span><br>
+      <table class="passwordSection">
+        <tr>
+          <td class="pwTitle">Current Password</td>
+          <td><input type="text" class="inputPassword" id="curPW" placeholder="Current Password"></td>
+        </tr>
+        <tr>
+          <td class="pwTitle">New Password</td>
+          <td><input type="text" class="inputPassword" id="newPW" placeholder="New Password"></td>
+        </tr>
+        <tr>
+          <td class="pwTitle">Confirm Password</td>
+          <td><input type="text" class="inputPassword" id="conPW" placeholder="Comfirm Password"></td>
+        </tr>
+      </table><br><br>
+      <button type="button" class="btnblue" id="changePW">Change Password</button>
+    </div>
+  </body>
+</html>

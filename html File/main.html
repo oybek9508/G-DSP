@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../css Folder/main.css">
+    <link rel="stylesheet" href="/css Folder/project_bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/project_bar.js"></script>
+  </head>
+  <body class="main_body">
+    <div class="main_header">
+      <div class="greeting">
+        <span id="today">Good Monday Morning</span><br>
+        <span>Check your new report</span>
+      </div>
+      <div class="main_function">
+        <button type="button" id="download">Download Report</button>
+        <button type="button" id="edit">Edit Report</button>
+      </div>
+    <div class="states">
+      <div class="state" id="progress">
+        <span><strong>Projects</strong> in progress</span><br><br>
+        <span id="progress_num">2</span>
+      </div>
+      <div class="state" id="completed">
+        <span>Completed project</span><br><br>
+        <span id="completed_num">60</span>
+      </div>
+      <div class="state" id="negative">
+        <span><strong>Negative</strong> KPI's</span><br><br>
+        <img src="../img/downArrow.png"> <span id="Negative_num">4</span>
+      </div>
+      <div class="state" id="postive">
+        <span><strong>Postive</strong> KPI's</span><br><br>
+        <img src="../img/upArrow.png"> <span id="Postive_num">24</span>
+      </div>
+    </div>
+  </div>
+    <div class="section">
+      <div class="project">
+        <span class="project_title">Project</span>
+        <div id="importProjectBar">
+          <script>
+            createBar()
+            createBar()
+            setEvent()
+          </script>
+        </div>
+        <span> + CREATE NEW PROJECT</span>
+        <!--
+        <table class="project_table">
+          <colgroup>
+            <col span="1">
+            <col span="3">
+            <col span="2">
+            <col span="2">
+            <col span="2">
+          </colgroup>
+          <thead>
+            <th><span>Project in progress</span> | <span>Completed Project</span></th>
+            <th>DSP</th>
+            <th>P KPI'S</th>
+            <th>N KPI'S</th>
+            <th>Deadline</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../img/Project_Icon/DELL.svg" alt=""> DELL_PC</td>
+              <td>
+                <img src="../img/DSP_ICON/facebook.svg" class="dep_icon">
+                <img src="../img/DSP_ICON/linkedin.svg" class="dep_icon">
+                <img src="../img/DSP_ICON/google.svg" class="dep_icon">
+              </td>
+              <td>8</td>
+              <td>2</td>
+              <td>D - 40</td>
+            </tr>
+            <tr>
+              <td><img src="../img/Project_Icon/SAMSUNG.svg" alt=""> SAMSUNG</td>
+              <td>
+                <img src="../img/DSP_ICON/smartmind.svg" class="dep_icon">
+                <img src="../img/DSP_ICON/linkedin.svg" class="dep_icon">
+                <img src="../img/DSP_ICON/google.svg" class="dep_icon">
+              </td>
+              <td>16</td>
+              <td>2</td>
+              <td>D - 3</td>
+            </tr>
+            <tr>
+              <td colspan="5"> + CREATE NEW PROJECT</td>
+            </tr>-->
+            <!-- Project Data가 들어간다-->
+          </tbody>
+        </table>
+      </div>
+      <div class="Achieve">
+        <span>Project Achieve</span>
+        <div class="boxlist">
+          <div class="box">
+            <br>
+            <span class="box_title">Edit Title</span><br><br>
+          </div>
+          <div class="box add">
+            <img class="plus_Achieve" src="../img/plus_Achieve.svg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

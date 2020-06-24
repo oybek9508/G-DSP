@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css Folder/report.css">
+    <link rel="stylesheet" href="/css Folder/BVI_Tracking_Alert.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script>
+    /*
+    function insertData(data){
+        var $trbody = $("<tr>").appendTo($("#reportBody"))
+        $("<td>").text(data.advertiser).appendTo($trbody);
+        $("<td>").text(data.campaign).appendTo($trbody);
+        $("<td>").text(data.uniqueClick).appendTo($trbody);
+        $("<td>").text(data.click).appendTo($trbody);
+        $("<td>").text(data.impression).appendTo($trbody);
+        $("<td>").text(data.conversion).appendTo($trbody);
+        $("<td>").text(data.event).appendTo($trbody);
+        $("<td>").text(data.CTR).appendTo($trbody);
+        $("<td>").text(data.CVR).appendTo($trbody);
+        $("<td>").text(data.CPM).appendTo($trbody);
+        $("<td>").text(data.eCPC).appendTo($trbody);
+        $("<td>").text(data.eCPA).appendTo($trbody);
+    }
+        */
+    function makeChart($canvas,$dataSet){
+      $labels = []
+      $.each($dataSet,function(idx,data){
+        $labels.push("")
+      })
+      var myChart = new Chart($canvas, {
+        type: 'line',
+        borderWidth : 1,
+        data: {
+          labels : $labels,
+          datasets:[{
+            label : [{
+              display:false
+            }],
+            borderWidth : 5 ,
+            borderColor : ['rgba(0,0,0,0.7)'],
+            data : $dataSet,
+            fill : false,
+          }]
+        },
+        options: {
+            responsive:false,
+            legend : {
+              display:false
+            },
+            scales:{
+              xAxes:[{
+                display:false
+              }],
+              yAxes:[{
+                ticks:{
+                  beginAtZero : true
+                },
+                display:false
+              }]
+            }
+        }
+      });
+    }
+    $(function(){
+  			$.ajax({
+  				url : "http://gatewaydsp.koreacentral.cloudapp.azure.com:5000/facebook/report",
+  				method : "get",
+          type: "jsonp",
+  				success : function(result, status, xhr) {
+            console.log(result)
+            makeChart($("#CoR_Chart"),result.cvr)
+            makeChart($("#Co_Chart"),result.conversions)
+            makeChart($("#CPL_Chart"),result.ctr)
+            makeChart($("#eCPC_Chart"),result.ecpc)
+            makeChart($("#eCPA_Chart"),result.ecpa)
+            makeChart($("#CPM_Chart"),result.cpm)
+            makeChart($("#Impression_Chart"),result.impressions)
+            makeChart($("#Click_Chart"),result.clicks)
+            makeChart($("#Uclick_Chart"),result.unique_clicks)
+  				},
+  				error : function(xhr) {
+  					console.log(xhr.status);
+  				}
+  			});
+		})
+
+    </script>
+  </head>
+  <body>
+    <!--Table for Test-->
+        <!--
+    <table>
+      <thead>
+        <th>advertiser</th>
+        <th>campaign</th>
+        <th>unique click</th>
+        <th>click</th>
+        <th>imprression</th>
+        <th>conversion</th>
+        <th>event</th>
+        <th>CTR</th>
+        <th>CVR</th>
+        <th>CPM</th>
+        <th>eCPC</th>
+        <th>eCPA</th>
+      </thead>
+      <tbody id="reportBody">
+
+      </tbody>
+    </table>
+  -->
+    <div class="dataHeader">
+      <div class="pageTitle">
+        <span class="report_title"><strong>Overview</strong> KPI's</span><br>
+        <span class="report_adder"></span>check your campaign's perfomance
+      </div>
+      <div class="dataFilter">
+        <select class="options" name="">
+          <option value="1"><strong>jaunary</strong>2020</option>
+        </select>
+        <select class="options" name="">
+          <option value="all">All campaign</option>
+        </select>
+      </div>
+      <div class="pageFunction">
+        <div id=reportDownload>
+          Download Report
+        </div>
+        Edit
+      </div>
+    </div>
+    <div class="graphZone">
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Coversion Rate</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="CoR_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="CoR_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="CoR_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="CoR_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Coversion</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="Co_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="Co_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="Co_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="Co_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>CPL</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="CPL_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="CPL_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="CPL_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="CPL_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>eCPC</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="eCPC_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="eCPC_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="eCPC_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="eCPC_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>CPM</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="CPM_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="CPM_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="CPM_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="CPM_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>eCPA</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="eCPA_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="eCPA_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="eCPA_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="eCPA_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>IMPRESSION</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="Impression_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="Impression_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="Impression_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="Impression_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>CLICK</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="Click_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="Click_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="Click_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="Click_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Unique Click</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          <span id="Uclick_Percent">8.6%</span>
+        </div>
+      </div>
+      <canvas id="Uclick_Chart" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span id="Uclick_Goal">3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span id="Uclick_ROC">+23%</span><br>
+          <span>MoM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="AlertZone">
+      <div class="alertTitle">
+        BVI Tracking Alert
+      </div>
+      <div class="TrakingAlert">
+        <div class="alertZone">
+          <div class="alertCircle"></div>
+          <div class="alertReport">
+            <div class="alertReport_title">
+              <span>Campaign Name</span>
+              <span id="campaign_name">Nike_Summer_Seacon_2020</span>
+            </div>
+            <div class="alertReport_info">
+              <span id="event_name">High perfomance</span>
+              <span id="delivery">delivery</span>
+              <span id="BS">BS : Lowest cost</span>
+              <span id="endDay">Ends : 27 Jun 2020</span>
+            </div>
+            <div class="alertReport_graph">
+              <div class="alertReport_graph_1">
+
+              </div>
+              <div class="alertReport_graph_2">
+
+              </div>
+            </div>
+          </div>
+          <div class="alertSNS">
+            <div class="alertSNS_list">
+              <div class="alertSNS_icon">
+                <img class="alertSNS_icon_img" src="../img/Project_ICON/DELL.svg">
+                <div class="alertSNS_line">
+
+                </div>
+              </div>
+              <div class="alertSNS_info">
+                <span id="alertSNS_ID">SNS ID</span><br>
+                <span id="alertSNS_content">나이키 정말 조아용</span><br>
+                <span id="alertSNS_tag">Nike@Nike</span><br>
+                <span id="alertSNS_info">7분 전 | 642 750 33</span>
+              </div>
+              <div class="alertSNS_check">
+                ✓
+              </div>
+            </div>
+            <div class="alertSNS_list">
+              <div class="alertSNS_icon">
+                <img class="alertSNS_icon_img" src="../img/Project_ICON/DELL.svg">
+                <div class="alertSNS_line">
+
+                </div>
+              </div>
+              <div class="alertSNS_info">
+                <span id="alertSNS_ID">SNS ID</span><br>
+                <span id="alertSNS_content">나이키 정말 조아용</span><br>
+                <span id="alertSNS_tag">Nike@Nike</span><br>
+                <span id="alertSNS_info">7분 전 | 642 750 33</span>
+              </div>
+              <div class="alertSNS_check">
+                ✓
+              </div>
+            </div><div class="alertSNS_list">
+              <div class="alertSNS_icon">
+                <img class="alertSNS_icon_img" src="../img/Project_ICON/DELL.svg">
+                <div class="alertSNS_line">
+
+                </div>
+              </div>
+              <div class="alertSNS_info">
+                <span id="alertSNS_ID">SNS ID</span><br>
+                <span id="alertSNS_content">나이키 정말 조아용</span><br>
+                <span id="alertSNS_tag">Nike@Nike</span><br>
+                <span id="alertSNS_info">7분 전 | 642 750 33</span>
+              </div>
+              <div class="alertSNS_check">
+                ✓
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="alertButton">
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

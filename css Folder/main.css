@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+.main_body{
+
+}
+.main_header{
+  color: white;
+  display: inline-block;
+  width: 100%;
+  height: 266px;
+  background: linear-gradient(287.47deg, #213990 -173.05%, #1A6CEA 89.62%);
+}
+.greeting{
+  display: inline-block;
+  margin: 29px;
+  margin-left: 220px;
+}
+.main_function{
+  margin-right: 219px;
+  margin: 42px;
+  float: right;
+  height: 35px;
+}
+#download{
+  padding: 10px;
+  background: #FAFAFA;
+  border-radius: 7px;
+  box-sizing: border-box;
+  border: 1px solid #FAFAFA
+}
+#edit{
+  padding: 10px;
+  border-radius: 7px;
+  box-sizing: border-box;
+  border: 1px solid #FAFAFA
+}
+#today{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 38px;
+}
+
+.state{
+  padding : 10px;
+  width: 150px;
+  float : left;
+}
+.states{
+  font-size : 16px;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-left: 213px;
+  overflow: hidden;s
+}
+#progress_num, #completed_num, #Negative_num, #Postive_num{
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 48px;
+}
+.state:nth-child(1){
+  border-right: 1px solid #C4C4C4;
+}
+.state:nth-child(3){
+  float: right;
+}
+.state:nth-child(4){
+  float: right;
+}
+.section{
+  padding-left: 227px;
+  padding-right: 185px;
+  min-height: 724px;
+  background: #f7f7fd;
+}
+.project{
+  padding-top: 55px;
+}
+.project_title{
+  font-family: "Roboto";
+  font-style:normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+}
+.project_table{
+  width: 100%;
+  background: #FFFFFF;
+  margin-top: 36px;
+  border: 0px;
+}
+th{
+  border: 0px;
+  background: #f7f7fd;
+  text-align: left;
+  font-size: 10px;
+  line-height: 11px;
+}
+thead{
+  border: 0px;
+}
+tbody{
+  border: 0px;
+  background: #FFFFFF;
+}
+tr{
+  border: 0px;
+  height: 42px;
+  font-size: 16px;
+  line-height: 18px;
+}
+td{
+  border-radius: 10px;
+  padding: 10px;
+}
+.Achieve{
+  margin-top: 148px;
+}
+.boxlist{
+
+}
+.box{
+  float: left;
+  display: inline-block;
+  margin: 20px;
+  margin-left: 0px;
+  width: 240px;
+  height: 220px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.box_title{
+  font-size: 19px;
+  line-height: 23px;
+  margin: 20px;
+}
+.add{
+  background: #efefef;
+  text-align : center;
+  line-height: 260px;
+}
+.plus_Achieve{
+
+}
+.dsp_icon{
+  width: 24px;
+  height: 24px;
+}

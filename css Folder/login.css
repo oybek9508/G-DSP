@@ -1,0 +1,168 @@
+* {
+  margin : 0 auto;
+  padding : 0;
+  border: 0px solid orange;
+}
+body {
+  height: 100vh;
+}
+html{
+  overflow: hidden;
+}
+body{
+  background: #f7f7fd;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
+.block{
+  display: inline-block;
+}
+.logo{
+  position: relative;
+  margin-top: 262px;
+  width: 90px;
+  height: 81px;
+}
+.lg{
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 81px;
+  position: absolute;
+  float: left;
+}
+.title{
+  margin-top: 381px;
+  width: 150px;
+  height: 25px;
+  display: inline-block 
+}
+.loginForm{
+  width: 400px;
+  
+}
+.loginInput{
+  margin : 20px;
+  border: 0px;
+  border-bottom: 1px solid #2D95FE;
+  width: 330px;
+  padding : 13px;
+  color : white;
+  background: rgba(255, 255, 255, 0);
+}
+.support{
+  font-family: "Roboto";
+  color: white;
+  float: right;
+  font-size: 12px;
+  margin-right: 25px;
+}
+.loginButton{
+  font-family: "Roboto";
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0);
+  width: 256px;
+  height: 51px;
+  color: white;
+  font-size: 24px;
+}
+.company{
+  position: absolute;
+}
+.circles {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -50;
+  top: 0;
+  left: 0;
+  align-content: center;
+  line-height: 50%;
+  -webkit-transform: translate3D(-50%, -50%, 0);
+          transform: translate3D(-50%, -50%, 0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin1 5.5s linear infinite;
+          animation: spin1 5.5s linear infinite;
+}
+@-webkit-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.Loader {
+  z-index: -10;
+  position: absolute;
+  width: 826px;
+  height: 826px;
+  min-width: 110px;
+  overflow: visible;
+  top: 0px;
+  left: calc(50% - 413px);
+  align-content: center;
+  line-height: 50%;
+  border-radius: 50%;
+}
+
+@media all
+    and (max-width : 414px) 
+    and (max-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+      .title {
+        width: 114px;
+        height: 16px;
+        margin-top: 326px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .loginForm {
+        margin-left: auto;
+        margin-right: auto;
+      } 
+      .loginInput {
+        width: 100px;
+        padding: 1px;
+      }
+      .support {
+        position: absolute;
+        font-size: 10px;
+        width: 45px;
+        height: 12px;
+        left: 210.5px;
+        top:445px;
+        
+      }
+      .loginButton {
+        position: absolute;
+        font-size:12px; 
+        left: 162.5px;
+        top: 440px; 
+        width: 50px;
+        height: 21px;
+      }
+      .company {
+        position: absolute;
+        left: 134px;
+        top: 772px;
+      
+      }
+     }

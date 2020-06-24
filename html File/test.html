@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery.flowchart.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          var data = {
+            operators: {
+              operator1: {
+                top: 20,
+                left: 20,
+                properties: {
+                  title: 'Operator 1',
+                  inputs: {},
+                  outputs: {
+                    outs: {
+                      label: 'Output (:i)',
+                      multiple: true
+                    }
+                  }
+                }
+              },
+              operator2: {
+                top: 20,
+                left: 300,
+                properties: {
+                  title: 'Operator 2',
+                  inputs: {
+                    ins: {
+                      label: 'Input (:i)',
+                      multiple: true
+                    }
+                  },
+                  outputs: {}
+                }
+              },
+            },
+            links: {
+              link_1: {
+                fromOperator: 'operator1',
+                fromConnector: 'outs',
+                fromSubConnector: 0,
+                toOperator: 'operator2',
+                toConnector: 'ins',
+                toSubConnector: 0
+              },
+              link_2: {
+                fromOperator: 'operator1',
+                fromConnector: 'outs',
+                fromSubConnector: 1,
+                toOperator: 'operator2',
+                toConnector: 'ins',
+                toSubConnector: 1
+              }
+            }
+          };
+
+          // Apply the plugin on a standard, empty div...
+          $('body').flowchart({
+            data: data
+          });
+        });
+      </script>
+  </body>
+</html>

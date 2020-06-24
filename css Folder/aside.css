@@ -1,0 +1,50 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+body{
+  background: #f7f7fd;
+}
+.aside_menu{
+  margin-left: 185px;
+  margin-top: 204px;
+  margin-bottom: 204px;
+  width: 176px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.aside_button{
+    width: 174px;
+    height: 34px;
+    padding: 10px;
+    /* padding-left: 35px; */
+}
+.asideTitle{
+  background: #222222;
+  color : #FFFFFF;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 10px;
+}
+.asideContent{
+  background: #2C2C2C;
+  color : #ffffff;
+
+}
+.aside_help{
+  padding: 0px;
+  background: #f7f7fd;
+  color: #000000;
+}
+.aside_NC_content{
+  opacity: 0.4;
+}
+ div ul ul {
+   position: static;
+   display: none;
+ }
+ div ul budg-show.show{
+   display: block;
+ }

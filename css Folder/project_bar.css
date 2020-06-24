@@ -1,0 +1,103 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-style: normal;
+}
+.pBar{
+  width: 1148px;
+  height: 56px;
+  background: #FFFFFF;
+}
+.pBar_top{
+  width: 100%;
+  height: 56px;
+  overflow: hidden;
+}
+.pBar_top_left{
+  width: 500px;
+  float: left;
+  display: inline-block;
+}
+.pBar_logo{
+  width: 40px;
+  height: 40px;
+}
+.pBar_title{
+  display: inline-block;
+  margin-left: 27px;
+}
+.pBar_title_name{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color:#000000;
+}
+.pBar_title_id{
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: normal;
+  color: #888888;
+}
+.more_button{
+  float: right;
+  margin: 20px;
+}
+.pBar_top_right{
+  min-width: 400px;
+  height: 50px;
+  left: 500px;
+  float: left;
+  display: inline-block;
+}
+.pBar_info{
+  margin: 14px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: inline-block;
+  width: 73px;
+  height: 32px;
+}
+.pBar_info_data{
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+.pBar_info_title{
+  font-size: 12px;
+  line-height: 14px;
+  color: #888888;
+}
+.pBar_dDay{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  color:#000000;
+}
+.topDay{
+  float: right;
+  margin-right: 115px;
+  line-height: 56px;
+}
+.botDay{
+  float: right;
+  margin-top: 60px;
+  margin-right: 45px;
+}
+.pBar_bottom{
+  width: 100%;
+  height: 174px;
+  display: none;
+}
+.pBar_more_info{
+  width: 190px;
+  margin-left:54px;
+  display: inline-block;
+}
+.pBar_graph{
+  width: 190px;
+  height: 102px;
+  display: inline-block;
+  border: 1px solid black;
+}

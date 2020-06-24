@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin : 0;
+        padding : 0;
+        box-sizing : border-box;
+      }
+      body{
+        overflow : hidden;
+      }
+      iframe{
+        border : 0px;
+        width : 100%;
+        display : inline-block;
+      }
+      .frame_header{
+        height:56px;
+      }
+      .frame_section{
+        background : #f7f7fd;
+        min-height : 768px;
+      }
+      .left{
+        float : left;
+        width : 72px;
+        height: 100%;
+      }
+      .right{
+        float: right;
+        width : calc(100% - 74px);
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="component/header_project.html" name="header" class="frame_header"></iframe>
+    <div>
+        <iframe src="component/report_aside.html" name="section" class="frame_section left"></iframe>
+        <iframe src="report/reportSample.html" name="section" class="frame_section right"></iframe></div>
+
+  </body>
+</html>

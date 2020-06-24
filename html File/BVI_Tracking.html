@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css Folder/BVI_Tracking_graph.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/jquery.flowchart.js"></script>
+  </head>
+  <body>
+    <div class="zone"></div>
+    <!--
+    <div class="diagram active" id="box1" draggable="true">
+      <div class="title">
+        <div class="circle">
+          ✓
+        </div>
+        <div class="title_name">
+          Nike_Summer_Seacon_2020
+        </div>
+      </div>
+      <div class="content">
+        sample box이다
+      </div>
+    </div>
+  -->
+    <script>
+    /*
+      function makeOperators(){
+        $properties = {}
+        $properties.title = "태그 앞단" + 제목 + "태그 뒤단"
+        $proterties.body = "태그 앞단" + 내용 + "태그 뒤단"
+        $properties.class = "diagram"
+        $properties.inputs = OP.id +_input : {label:"o"};
+        $prpperties.outputs = OP.id +_output : {label:"o"};
+        $operator : {}
+        $operator.top = 0;
+        $operator.left = 0;
+        $operator.properties = $properties;
+        return $operator;
+      }
+      function makeLinks(){
+        $link = {}
+        $link.fromOperator = fromID;
+        $link.fromConnector = fromID+_output
+        $link.toOperator = toID;
+        $link.toConnector = toID+_input
+        return $link
+      }
+      */
+      var link17 = {
+          fromOperator:'diagram1',
+          fromConnector:'output1',
+          toOperator:'diagram7',
+          toConnector:'input1'
+      }
+      var link18 = {
+          fromOperator:'diagram1',
+          fromConnector:'output1',
+          toOperator:'diagram8',
+          toConnector:'input1'
+      }
+      var link19 = {
+          fromOperator:'diagram1',
+          fromConnector:'output1',
+          toOperator:'diagram9',
+          toConnector:'input1'
+      }
+      var link111 = {
+          fromOperator:'diagram1',
+          fromConnector:'output1',
+          toOperator:'diagram11',
+          toConnector:'input1'
+      }
+      var link72 = {
+          fromOperator:'diagram7',
+          fromConnector:'output1',
+          toOperator:'diagram2',
+          toConnector:'input1'
+      }
+      var link82 = {
+          fromOperator:'diagram8',
+          fromConnector:'output1',
+          toOperator:'diagram2',
+          toConnector:'input1'
+      }
+      var link83 = {
+          fromOperator:'diagram8',
+          fromConnector:'output1',
+          toOperator:'diagram3',
+          toConnector:'input1'
+      }
+      var link93 = {
+          fromOperator:'diagram9',
+          fromConnector:'output1',
+          toOperator:'diagram3',
+          toConnector:'input1'
+      }
+      var link113 = {
+          fromOperator:'diagram11',
+          fromConnector:'output1',
+          toOperator:'diagram3',
+          toConnector:'input1'
+      }
+      var link25 = {
+          fromOperator:'diagram2',
+          fromConnector:'output1',
+          toOperator:'diagram5',
+          toConnector:'input1'
+      }
+      var link34 = {
+          fromOperator:'diagram3',
+          fromConnector:'output1',
+          toOperator:'diagram4',
+          toConnector:'input1'
+      }
+      var link4P = {
+          fromOperator:'diagram4',
+          fromConnector:'output1',
+          toOperator:'Postive_effert',
+          toConnector:'input1'
+      }
+      var link5P = {
+          fromOperator:'diagram5',
+          fromConnector:'output1',
+          toOperator:'Postive_effert',
+          toConnector:'input1'
+      }
+      var $diagram = {
+        operators : {
+            diagram1 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title"><div class="circle">✓</div><div class="title_name">Nike_Summer_Seacon_2020</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },
+            diagram2 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title"><div class="circle">✓</div><div class="title_name">Audience Setting 1</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span>\
+                        <br><br>\
+                        Language : English<br>\
+                        Gender : Man<br>\
+                        Age Group : 20,30,50<br>\
+                        interest : Football, Soccer, Exercise<br>\
+                        <br>\
+                        Keyword : Nike,Summer shirt, CR7, Nike Event</div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram3 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title"><div class="circle">✓</div><div class="title_name">Audience Setting 2</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span>\
+                        <br><br>\
+                        Language : English,Spanish<br>\
+                        Gender : Man<br>\
+                        Age Group : 20,30,50<br>\
+                        interest : Football, Soccer, Exercise<br>\
+                        <br>\
+                        Keyword : Nike,Summer shirt, CR7, Nike Event</div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram4 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title"><div class="circle">✓</div><div class="title_name">Campaign Type : Video</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span><br>\
+                        Media,Youtube,Search engine<br>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram5 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title"><div class="circle">✓</div><div class="title_name">Campaign Type : Picture</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span><br>\
+                        Tiktoc,Instagram,Google<br>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },
+            diagram5 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title"><div class="circle">✓</div><div class="title_name">Campaign Type : Picture</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span><br>\
+                        Tiktoc,Instagram,Google<br>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram6 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title gray"><div class="circle uncheck">✓</div><div class="title_name">Audience Setting 3</div></div>',
+                body : '<div class="content">\
+                        <span>Active</span><br>\
+                        <span>Delivery ▲ BS : Lowest Cost Ends : 27 Jun 2020</span>\
+                        <br><br>\
+                        Language : English,Franch<br>\
+                        Gender : Man<br>\
+                        Age Group : 20,30,50<br>\
+                        interest : Football, Soccer, Exercise<br>\
+                        <br>\
+                        Keyword : Nike,Summer shirt, CR7, Nike Event</div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram7 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title gray"><div class="circle">✓</div><div class="title_name">City</div></div>',
+                body : '<div class="content">\
+                        <span>LA</span><br>\
+                        <span>Delivery</span>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },
+            diagram8 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title gray"><div class="circle">✓</div><div class="title_name">Area</div></div>',
+                body : '<div class="content">\
+                        <span>Michigan</span><br>\
+                        <span>Delivery</span>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },
+            diagram9 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title gray"><div class="circle">✓</div><div class="title_name">Area</div></div>',
+                body : '<div class="content">\
+                        <span>New Jersey</span><br>\
+                        <span>Delivery</span>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram10 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title gray"><div class="circle uncheck">✓</div><div class="title_name">Area</div></div>',
+                body : '<div class="content">\
+                        <span>East</span><br>\
+                        <span>Delivery</span>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },diagram11 : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div class="title gray"><div class="circle">✓</div><div class="title_name">City</div></div>',
+                body : '<div class="content">\
+                        <span>Seattle</span><br>\
+                        <span>Delivery</span>\
+                        </div>',
+                class : 'diagram',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },Postive_effert : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div>V</div>',
+                class : 'Postive_effert',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },Negative_effert : {
+              top: 0,
+              left: 0,
+              properties: {
+                title : '<div>V</div>',
+                class : 'Negative_effert',
+                inputs :{
+                  input1 : {
+                    label : "o"
+                  }
+                },outputs :{
+                  output1 :{
+                    label : "o"
+                  }
+                }
+              }
+            },
+        }
+      }
+
+      $(function(){
+        $(".zone").flowchart({
+          data : $diagram,
+          canUserEditLinks : false,
+          canUserMoveOperators : true,
+          multipleLinksOnInput : true,
+          multipleLinksOnOutput : true,
+          defaultLinkColor : "#4CBA38",
+          defaultSelectedLinkColor : "#4CBA38",
+          linkWidth : 1
+        })
+        $(".zone").flowchart('createLink' ,"link17",link17);
+        $(".zone").flowchart('createLink' ,"link18",link18);
+        $(".zone").flowchart('createLink' ,"link19",link19);
+        $(".zone").flowchart('createLink' ,"link111",link111);
+        $(".zone").flowchart('createLink' ,"link72",link72);
+        $(".zone").flowchart('createLink' ,"link82",link82);
+        $(".zone").flowchart('createLink' ,"link83",link83);
+        $(".zone").flowchart('createLink' ,"link93",link93);
+        $(".zone").flowchart('createLink' ,"link113",link113);
+        $(".zone").flowchart('createLink' ,"link34",link34);
+        $(".zone").flowchart('createLink' ,"link25",link25);
+        $(".zone").flowchart('createLink' ,"link4P",link4P);
+        $(".zone").flowchart('createLink' ,"link5P",link5P);
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin : 0;
+        padding : 0;
+        box-sizing : border-box;
+      }
+      body{
+        background:#f7f7fd;
+        overflow : hidden;
+      }
+      .bodyZone{
+        overflow : hidden;
+        margin-top:94px;
+      }
+      iframe{
+        border : 0px;
+        width : 100%;
+      }
+      .iframe_left{
+        width : 176px;
+        margin-left : 185px;
+        height : 100%;
+        overflow : hidden;
+        min-height : 768px;
+        float : left;
+      }
+      .iframe_right{
+        float : right;
+        width : calc(100% - 176px - 185px - 31px);
+        min-height : 768px;
+        margin-left : 31px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <script src="/js/FileSaver.js"></script>
+    <script src="/js/jhxlsx.js"></script>
+    <script src="/js/sendBudget.js"></script>
+  </head>
+  <body>
+    <iframe id="campaign_menu" src="component/campaign_menu.html" width="100%" height="50px"></iframe>
+    <div class="bodyZone">
+      <iframe id="campaign_aside" src="component/campaign_aside.html" class="iframe_left"></iframe>
+      <iframe id="campaign_content" src="campaign/budget_setting.html" class="iframe_right"></iframe>
+    </div>
+
+  </body>
+</html>

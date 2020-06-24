@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #f7f7fd;
+}
+.profile_title{
+  font-family: "Roboto";
+  margin-top: 67px;
+  margin-left: 183px;
+  font-size: 36px;
+  line-height: 42px;
+}
+.profile_addex{
+  margin-left: 183px;
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 19px;
+  color: #9B9B9B
+}
+.menu{
+  margin-left: 183px;
+  margin-top: 33px;
+}
+.menu_button{
+  display: inline-block;
+  padding: 12px;
+}
+.section_top, .section_bottom{
+  background: #FFFFFF;
+  margin: 183px;
+  margin-top : 0px;
+  margin-bottom : 7px;
+  overflow: hidden;
+  padding: 34px;
+  padding-left: 90px;
+}
+.profile{
+  float: left;
+}
+.team{
+  float: left;
+  margin-left: 126px;
+}
+.section_title{
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+}
+.profile_picture{
+  float: left;
+  width: 74px;
+  height: 74px;
+  margin-right: 51px;
+}
+#Upload_Photo, #Clear_Photo, #updateProfile {
+  margin: 15px;
+  margin-right: 0px;
+}
+
+#Confirm{
+  margin-top: 112px;
+  float: right;
+}
+.inputProfile{
+  width: 200px;
+  margin-right: 45px;
+  height: 31px;
+  border: 0px;
+  border-bottom: 1px solid gray;
+}
+.btnwhite, .btnblue{
+  width: 105px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 10.6px;
+  line-height: 13px;
+  padding: 9px;
+  border: 0px;
+  border-radius: 5px;
+}
+.btnwhite{
+  border: 1px solid gray;
+  background: #ffffff;
+}
+.btnblue{
+  background: #2390FE;
+  color: #fafafA;
+}
+.passwordSection{
+  margin-top: 45px;
+}
+.pwTitle{
+  width: 150px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 16px;
+}
+.inputPassword{
+  width: 550px;
+  padding : 7px;
+  border: 0px;
+  border-bottom: 1px solid gray;
+}
+#changePW{
+  float: right;
+}

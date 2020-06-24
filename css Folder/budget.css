@@ -1,0 +1,45 @@
+.budgetContainer {
+  margin-left: 392px;
+  margin-top: -906px;
+}
+
+.makeGoal{
+  padding: 58px;
+  padding-top: 44px;
+}
+.goalData{
+  margin-top: 79px;
+  overflow: hidden;
+}
+.editBudget{
+  float: left;
+  width: 448px;
+}
+.Duration{ 
+  position: absolute; 
+  left: 960px; 
+  margin-top: 0px;
+  display: inline-block;
+}
+.bidding{
+  /* position: absolute; */
+  margin-top: 172px;
+  overflow: hidden;
+}
+.biddingOption{
+  float: left;
+  width: 425px;
+}
+.biddingGoal{
+  position: absolute;
+  left: 960px;
+  float: left;
+}
+
+.label1 {
+  border-bottom: 1px solid #9B9B9B; 
+}
+
+.Goal, .CPA, .bid{
+  width: 210px;
+}

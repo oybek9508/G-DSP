@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css Folder/report.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script>
+    function insertData(data){
+        var $trbody = $("<tr>").appendTo($("#reportBody"))
+        $("<td>").text(data.advertiser).appendTo($trbody);
+        $("<td>").text(data.campaign).appendTo($trbody);
+        $("<td>").text(data.uniqueClick).appendTo($trbody);
+        $("<td>").text(data.click).appendTo($trbody);
+        $("<td>").text(data.impression).appendTo($trbody);
+        $("<td>").text(data.conversion).appendTo($trbody);
+        $("<td>").text(data.event).appendTo($trbody);
+        $("<td>").text(data.CTR).appendTo($trbody);
+        $("<td>").text(data.CVR).appendTo($trbody);
+        $("<td>").text(data.CPM).appendTo($trbody);
+        $("<td>").text(data.eCPC).appendTo($trbody);
+        $("<td>").text(data.eCPA).appendTo($trbody);
+    }
+    $(function(){
+  			$.ajax({
+  				url : "http://gatewaydsp.koreacentral.cloudapp.azure.com:5000/facebook/report",
+  				method : "get",
+          type: "jsonp",
+  				success : function(result, status, xhr) {
+            insertData(result.data1)
+            insertData(result.data2)
+            insertData(result.data3)
+  				},
+  				error : function(xhr) {
+  					console.log(xhr.status);
+  				}
+  			});
+        makeChart($('#myChart1'),['1'])
+        makeChart($('#myChart2'),['1'])
+        makeChart($('#myChart3'),['1'])
+        makeChart($('#myChart4'),['1'])
+        makeChart($('#myChart5'),['1'])
+        makeChart($('#myChart6'),['1'])
+        makeChart($('#myChart7'),['1'])
+        makeChart($('#myChart8'),['1'])
+        makeChart($('#myChart9'),['1'])
+		})
+    </script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <th>advertiser</th>
+        <th>campaign</th>
+        <th>unique click</th>
+        <th>click</th>
+        <th>imprression</th>
+        <th>conversion</th>
+        <th>event</th>
+        <th>CTR</th>
+        <th>CVR</th>
+        <th>CPM</th>
+        <th>eCPC</th>
+        <th>eCPA</th>
+      </thead>
+      <tbody id="reportBody">
+
+      </tbody>
+    </table>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart1" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart2" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart3" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart4" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart5" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart6" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart7" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart8" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+    <div class="dataGraph">
+      <div class="dataTitle">
+        <div class="dataInfo">
+          <span>Title</span><br>
+          <span>Month to Date</span>
+        </div>
+        <div class="dataPercent">
+          8.6%
+        </div>
+      </div>
+      <canvas id="myChart9" class=dataChart></canvas>
+      <div class="dataFooter">
+        <div class="dataGoal">
+          <span>3.0%</span><br>
+          <span>Goal</span>
+        </div>
+        <div class="dataROC">
+          <span>+23%</span><br>
+          <span>MoM</span>
+        </div>
+        <img src="../img/rocketUpper.svg">
+      </div>
+    </div>
+
+    <script>
+      function makeChart($canvas,$dataSet){
+        var myChart = new Chart($canvas, {
+          type: 'line',
+          borderWidth : 3,
+          data: {
+            labels :["","","","",""],
+            datasets:[{
+              label : [{
+                display:false
+              }],
+              borderWidth : 10,
+              borderColor : ['rgba(0,0,0,0.7)'],
+              data : [5,11,1,4,7],
+              fill : false,
+            }]
+          },
+          options: {
+              responsive:false,
+              legend : {
+                display:false
+              },
+              scales:{
+                xAxes:[{
+                  display:false
+                }],
+                yAxes:[{
+                  ticks:{
+                    beginAtZero : true
+                  },
+                  display:false
+                }]
+              }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

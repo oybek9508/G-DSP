@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css Folder/loading.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
+    <script>
+      $(function(){
+        $(".circle").css('top','-=' + ($(".circle").height() / 2) + 'px')
+        $(".circle").css('left','-=' + ($(".circle").width() / 2) + 'px')
+        $(".loading").css('top','-=' + ($(".loading").height() / 2) + 'px')
+        $(".loading").css('left','-=' + ($(".loading").width() / 2) + 'px')
+        setInterval(function(){
+            $(".loading").text("LOADING.")
+          setTimeout(function(){
+            $(".loading").text("LOADING..")
+          },333)
+          setTimeout(function(){
+            $(".loading").text("LOADING...")
+          },667)
+        },1000);
+        setTimeout(function(){
+            window.location.href = "home.html"
+        },5000)
+      })
+    </script>
+  </head>
+  <body>
+    <div>
+      <img class="circle" src="../img/circle_white.svg">
+      <span class="loading">LOADING...</span>
+    <div>
+  </body>
+</html>

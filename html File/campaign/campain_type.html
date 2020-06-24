@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css Folder/section_content.css">
+    <link rel="stylesheet" href="/css Folder/Font-Option.css">
+    <link rel="stylesheet" href="/css Folder/budget.css">
+  </head>
+  <body>
+    <form id="budgetForm">
+    <div class="section makeGoal">
+      <span class="Title">What is your <span class="beBold">Marketing Goal?</span></span><br>
+      <span class="content_big">Define how much you want to spend and how you want to spend it</span><br>
+      <div class="goalData">
+        <div class="editBudget">
+          <span class="subTitle">How much is your <span class="beBold">Budget</span> ?</span><br>
+          <select class="currency" name="currency">
+            <option value="USD">USD $</option>
+            <option value="EUR">EUR €</option>
+            <option value="KRW">KRW ￦</option>
+            <option value="JPY">JPY ￥</option>
+          </select>
+          <input type="number" name="total_budget">
+          <select class="budget_date" name="spend_option">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+        <div class="Duration">
+          <span class="subTitle beBold">Duration</span><br>
+          <label for="day">Day</label><input type="number" name="duration">
+          <label for="endDate">End Date</label><input type="date" name="endDate">
+        </div>
+      </div>
+    </div>
+    <div class="section bidding">
+      <div class="biddingOption">
+        <span class="subTitle"><span class="beBold">Bidding</span> option</span><br>
+        <select class="bid" name="bidOption">
+          <option value="Normal">Normal <span>(Recommanded)</span></option>
+        </select>
+      </div>
+      <div class="biddingGoal">
+        <span class="subTitle">What is your <span class="beBold">Goal?</span></span><br>
+        <select class="Goal" name="goal">
+          <option value="Conversation">Conversation</option>
+        </select><br>
+        <span class="subTitle">Target <span class="beBold">CPA</span></span><br>
+        <select class="CPA" name="CPA">
+          <option value="auto optimize">Auto optimize</option>
+        </select>
+      </div>
+    </div>
+    </form>
+  </body>
+</html>
